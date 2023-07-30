@@ -71,9 +71,6 @@ class Payment extends Component {
         if (cvc.length === 3) { return true }
         else { return false }
     }
-    componentDidUpdate() {
-        console.log('updated');
-    }
     render() {
         const { holderName, cardNumber, extM, extY, cvc } = this.state;
         return (
