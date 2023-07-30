@@ -1,0 +1,184 @@
+:root {
+    --White: #ffffff;
+    --Light_grayish_violet: #dedddf;
+    --Dark_grayish_violet: #8e8593;
+    --Very_dark_violet: #21092f;
+}
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    font-family: SpaceGrotesk;
+}
+@font-face {
+    font-family: SpaceGrotesk;
+    src: url(../assets/font/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf);
+}
+body {
+    font-size: 18px;
+    background: var(--White);
+}
+main {
+    display: flex;
+}
+.sidebar {
+    width: 500px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: url(../assets/images/bg-main-desktop.png) center / cover no-repeat;
+}
+
+.templateCard {
+    width: max-content;
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 50px 0;
+}
+.frontContainer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.backContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.backContainer span {
+    position: absolute;
+    right: 13%;
+    font-size: 1rem;
+    color: var(--White);
+    transform: translateY(-13px);
+    font-weight: 500;
+}
+.frontContainer img, .backContainer img {
+    width: 400px;
+}
+.templateCard .frontContainer {
+    transform: translateX(20%);
+}
+.templateCard .backContainer {
+    transform: translateX(40%);
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+}
+label {
+    width: 100%;
+    display: block;
+    color: var(--Very_dark_violet);
+    margin: 0 0 5px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.inputs, .miniInputs {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid var(--Light_grayish_violet);
+    border-radius: 10px;
+    color: var(--Very_dark_violet);
+    box-sizing: border-box;
+    font-weight: 500;
+    font-size: 1rem;
+}
+.inputs::placeholder, .miniInputs::placeholder {
+    color: var(--Light_grayish_violet);
+}
+.importantNumbers {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.cardExpiration {
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    gap: 0 10px;
+}
+.cardCVC {
+    flex-grow: 1;
+}
+#month, #year {
+    width: 45%;
+    flex-grow: 1;
+}
+.submit {
+    width: 100%;
+    height: 50px;
+    background: var(--Very_dark_violet);
+    border-radius: 10px;
+    text-align: center;
+    color: var(--White);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.shapesOnCard {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.shapesOnCard span:nth-child(1) {
+    width: 50px;
+    height: 50px;
+    background: var(--White);
+    border-radius: 50%;
+    display: inline-block;
+}
+.shapesOnCard span:nth-child(2) {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+    display: inline-block;
+}
+.displayHolder {
+    position: absolute;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--White);
+    margin: 0 0 65px;
+}
+.displayInformation {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    color: var(--White);
+    font-weight: 500;
+    margin: 0 0 20px;
+}
+.inValid {
+    border: 1px solid #ee2309;
+    color: #ee2309;
+}
+.valid {
+    border: 1px solid var(--Light_grayish_violet);
+    color: initial;
+}
